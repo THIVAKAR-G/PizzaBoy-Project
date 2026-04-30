@@ -1,0 +1,131 @@
+.add{
+    flex: 1;
+    margin-top: 6px;
+    color: #6D6D6D;
+    font-size: 16px;
+    min-width: 0;
+}
+.add form{
+   gap: 22px;
+   width: 100%;
+   max-width: 860px;
+   padding: 28px;
+   border-radius: 30px;
+   background: rgba(255, 255, 255, 0.92);
+   border: 1px solid rgba(255, 87, 34, 0.12);
+   box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+}
+.add-img-upload img{
+    width: 150px;
+    border-radius: 24px;
+    border: 1px dashed #f4b29b;
+    background: #fff8f4;
+    padding: 10px;
+}
+.add-product-name, .add-product-description{
+    width: 100%;
+}
+.add-product-name input ,.add-product-description textarea{
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 16px;
+    border: 1px solid #eadfd8;
+    background: #fffdfc;
+    outline: none;
+    font-size: 15px;
+}
+.add-category-price{
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+.add-category-price select,.add-category-price input{
+    min-width: 180px;
+    padding: 14px 16px;
+    border-radius: 16px;
+    border: 1px solid #eadfd8;
+    background: #fffdfc;
+    outline: none;
+}
+.add-btn{
+    width: fit-content;
+    border: none;
+    padding: 14px 22px;
+    background: linear-gradient(135deg, #ff6b2c, #ff4c24);
+    color: white;
+    cursor: pointer;
+    border-radius: 999px;
+    font-weight: 700;
+    box-shadow: 0 14px 28px rgba(255, 87, 34, 0.22);
+}
+
+.admin-page-header{
+    margin-bottom: 20px;
+}
+
+.admin-page-eyebrow{
+    display: inline-flex;
+    margin-bottom: 10px;
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: #fff1ea;
+    color: #f97316;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.admin-page-header h2{
+    margin-bottom: 8px;
+    font-size: clamp(1.7rem, 3vw, 2.4rem);
+    line-height: 1;
+    color: #1f2937;
+}
+
+.admin-page-header p{
+    max-width: 680px;
+    color: #667085;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .add{
+        font-size: 15px;
+    }
+
+    .add form{
+        padding: 20px;
+        border-radius: 24px;
+    }
+
+    .add-category-price{
+        flex-direction: column;
+    }
+
+    .add-category-price select,.add-category-price input{
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .add form{
+        padding: 16px;
+        border-radius: 20px;
+        gap: 18px;
+    }
+
+    .add-img-upload img{
+        width: 120px;
+        border-radius: 18px;
+    }
+
+    .admin-page-header h2{
+        font-size: 1.5rem;
+    }
+
+    .admin-page-header p{
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}

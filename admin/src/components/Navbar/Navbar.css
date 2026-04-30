@@ -1,0 +1,121 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: min(1380px, calc(100% - 40px));
+    margin: 18px auto 20px;
+    padding: 18px 22px;
+    border: 1px solid rgba(255, 87, 34, 0.12);
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.88);
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+    backdrop-filter: blur(14px);
+}
+.navbar .logo{
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    border-radius: 18px;
+    background: #fff8f4;
+    padding: 8px;
+    box-shadow: 0 12px 24px rgba(255, 87, 34, 0.12);
+}
+
+.navbar-brand{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.navbar-brand-copy{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.navbar-label{
+    color: #f97316;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.navbar-brand-copy h1{
+    font-size: clamp(1.2rem, 2vw, 1.7rem);
+    line-height: 1;
+}
+
+.navbar-profile{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.navbar-status{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.navbar-status span{
+    color: #94a3b8;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.navbar-status strong{
+    color: #1f2937;
+    font-size: 14px;
+}
+
+.navbar .profile{
+    width: 46px;
+    height: 46px;
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.12);
+}
+
+@media (max-width: 900px) {
+    .navbar{
+        width: min(100%, calc(100% - 20px));
+        padding: 16px;
+        border-radius: 24px;
+    }
+
+    .navbar-brand-copy h1{
+        font-size: 1.1rem;
+    }
+
+    .navbar-status{
+        display: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .navbar{
+        width: min(100%, calc(100% - 16px));
+        margin: 12px auto 14px;
+        padding: 14px;
+        border-radius: 20px;
+    }
+
+    .navbar-brand-copy{
+        display: none;
+    }
+
+    .navbar .logo{
+        width: 52px;
+        height: 52px;
+        border-radius: 14px;
+    }
+
+    .navbar .profile{
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+    }
+}
