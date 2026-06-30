@@ -451,9 +451,15 @@ const placeOrder = async (req, res) => {
       quantity: 1,
     });
 
+    if (!process.env.STRIPE_SECRET_KEY || process.env.STRIPE_SECRET_KEY === "your_stripe_secret_key_here") {
+      // Bypass Stripe for testing without an API key
+      const successUrl = `${req.headers.origin}/verify?success=true&orderId=${newOrder._id}`;
+      return res.json({ success: true, session_url: successUrl });
+    }
+
     const session = await stripe.checkout.sessions.create({
-      success_url: `http://localhost:5173/verify?success=true&orderId=${newOrder._id}`,
-      cancel_url: `http://localhost:5173/verify?success=false&orderId=${newOrder._id}`,
+      success_url: `${req.headers.origin}/verify?success=true&orderId=${newOrder._id}`,
+      cancel_url: `${req.headers.origin}/verify?success=false&orderId=${newOrder._id}`,
       line_items,
       mode: "payment",
     });
