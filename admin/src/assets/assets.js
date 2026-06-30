@@ -14,4 +14,4 @@ export const assets ={
     parcel_icon
 }
 
-export const url = import.meta.env.VITE_API_URL || 'https://pizzaboy.thivakarjob.app/api/'
+export const url = import.meta.env.VITE_API_URL || 'http://localhost:4000'

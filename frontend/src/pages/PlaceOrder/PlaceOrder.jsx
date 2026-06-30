@@ -301,7 +301,7 @@ const PlaceOrder = () => {
           navigate("/myorders");
         }
       } else {
-        toast.error("Error placing order");
+        toast.error(response.data.message || "Error placing order");
       }
     } catch (error) {
       console.error("Error placing order:", error);
